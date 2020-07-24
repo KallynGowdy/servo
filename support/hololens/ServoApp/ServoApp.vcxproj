@@ -65,10 +65,15 @@
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
-    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
-    <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
+    <AppxBundlePlatforms>arm64</AppxBundlePlatforms>
+    <AppInstallerUpdateFrequency>0</AppInstallerUpdateFrequency>
     <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
-    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+    <AppxSymbolPackageEnabled>True</AppxSymbolPackageEnabled>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <PackageCertificateThumbprint>E48F8CA559C7760A724AF955313017207AF5CA48</PackageCertificateThumbprint>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -872,6 +877,7 @@
     <None Include="..\..\..\target\x86_64-uwp-windows-msvc\release\z-1.dll">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
     </None>
+    <None Include="ServoApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LargeTile.scale-100.png" />
